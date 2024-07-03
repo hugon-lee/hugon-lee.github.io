@@ -22,9 +22,9 @@ repository               : "hugon-lee/hugon-lee.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "Hugon Lee"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : "Ph.D. candidate, Department of Mechanical Engineering, KAIST"
   location         : "Daejeon, Republic of Korea"
   employer         : "KAIST"
   uri              : # URL
