@@ -21,13 +21,13 @@ repository               : "hugon-lee/hugon-lee.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "hulee_fig.png"
+  avatar           : "hulee_fig.jpg"
   name             : "Hugon Lee"
   pronouns         : # example: "she/her"  
   bio              : "Ph.D. candidate, Department of Mechanical Engineering, KAIST"
   location         : "Daejeon, Republic of Korea"
   employer         : "KAIST"
-  uri              : # URL
+  uri              : "https://sites.google.com/site/seunghwalab/"
   email            : "hugon.lee96@gmail.com" 
 
   # Academic websites
