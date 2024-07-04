@@ -21,7 +21,7 @@ repository               : "hugon-lee/hugon-lee.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "hglee_fig.png"
+  avatar           : "hulee_fig.png"
   name             : "Hugon Lee"
   pronouns         : # example: "she/her"  
   bio              : "Ph.D. candidate, Department of Mechanical Engineering, KAIST"
@@ -200,18 +200,18 @@ kramdown:
 
 # Collections
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
+  # teaching:
+  #   output: true
+  #   permalink: /:collection/:path/
   publications:
     output: true
     permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
+  # portfolio:
+  #   output: true
+  #   permalink: /:collection/:path/
+  # talks:
+  #   output: true
+  #   permalink: /:collection/:path/
 
 
 # Defaults
