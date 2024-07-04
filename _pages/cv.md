@@ -34,12 +34,21 @@ Education
   
 Skills
 ======
-* Skill 1
+* Analysis software
+  * ABAQUS
+  * COMSOL Multiphysics
+  * Altair HyperWorks
+  * ANSYS FLUENT
 * Coding
   * Python
   * Matlab
   * Fortran for ABAQUS user subroutines
-* Skill 3
+* Materials fabrication and testing
+  * Filament winding
+  * Universal Testing Machine (UTM)
+  * Differential Scanning Calorimetry (DSC)
+  * Scanning Electron Microscope (SEM)
+
 
 Publications
 ======
