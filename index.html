@@ -1,23 +1,51 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hugon Lee</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8DZPGY92R2"></script>
-<script src="assets/js/analytics.js"></script>
-<script>
-	(function () {
-		var stored = localStorage.getItem("theme-preference");
-		var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-		document.documentElement.setAttribute("data-theme", theme);
-	})();
-</script>
-<link rel="stylesheet" href="assets/css/main.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="description" content="Hugon Lee — Ph.D. Candidate in Mechanical Engineering at KAIST, working on micromechanics of composites, physics-informed machine learning, and agentic AI for materials design.">
+
+	<meta property="og:title" content="Hugon Lee">
+	<meta property="og:description" content="Ph.D. Candidate, Mechanical Engineering, KAIST. Micromechanics of composites, physics-informed machine learning, data-driven design.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://hugon-lee.github.io/">
+	<meta property="og:image" content="https://hugon-lee.github.io/assets/img/hugon_lee4.jpg">
+
+	<title>Hugon Lee</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8DZPGY92R2"></script>
+	<script src="assets/js/analytics.js"></script>
+	<script>
+		(function () {
+			var stored = localStorage.getItem("theme-preference");
+			var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+			document.documentElement.setAttribute("data-theme", theme);
+		})();
+	</script>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Hugon Lee",
+			"url": "https://hugon-lee.github.io/",
+			"jobTitle": "Ph.D. Candidate / Incoming Postdoctoral Researcher",
+			"affiliation": {
+				"@type": "CollegeOrUniversity",
+				"name": "Korea Advanced Institute of Science and Technology (KAIST)"
+			},
+			"sameAs": [
+				"https://scholar.google.com/citations?user=jv38NJMAAAAJ&hl=en&oi=ao",
+				"https://orcid.org/0009-0008-2413-1968",
+				"https://github.com/hugon-lee"
+			]
+		}
+		</script>
+	<link rel="stylesheet" href="assets/css/main.css">
 </head>
+
 <body data-page="index">
 
 <div id="nav-placeholder"></div>

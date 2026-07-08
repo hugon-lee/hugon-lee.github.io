@@ -2,6 +2,7 @@ _site
 .bundle
 .DS_store
 .idea
+tex-cv/
 archive-projs/
 archive-al-folio/
 assets/illustrator/
