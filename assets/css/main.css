@@ -933,3 +933,45 @@ footer.site-footer .copyright {
 		font-size: 12.5px;
 	}
 }
+
+@media (max-width: 600px) {
+	.wrap {
+		padding: 0 20px;
+	}
+
+	.page-header h1 {
+		font-size: 26px;
+	}
+
+	.hero-text .links {
+		row-gap: 6px;
+		column-gap: 16px;
+	}
+
+	.contact-grid {
+		row-gap: 10px;
+		column-gap: 24px;
+	}
+
+	nav .wrap {
+		height: auto;
+		min-height: 56px;
+		padding: 10px 0;
+		flex-wrap: wrap;
+		row-gap: 8px;
+	}
+
+	.cv-entry-header {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 2px;
+	}
+
+	.cv-entry-header .cv-dates {
+		margin-top: 0;
+	}
+
+	.advisor {
+		margin-top: 4px;
+	}
+}
