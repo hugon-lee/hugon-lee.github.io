@@ -1,0 +1,7 @@
+_site
+.bundle
+.DS_store
+.idea
+archive-projs/
+archive-al-folio/
+assets/illustrator/

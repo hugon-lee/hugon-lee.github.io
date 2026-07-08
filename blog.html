@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog &mdash; Hugon Lee</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>
+	(function () {
+		var stored = localStorage.getItem("theme-preference");
+		var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+		document.documentElement.setAttribute("data-theme", theme);
+	})();
+</script>
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-page="blog">
+
+<nav>
+	<div class="wrap">
+		<div class="nav-links">
+			<a href="index.html">home</a>
+			<a href="news.html">news</a>
+			<a href="research.html">research</a>
+			<a href="publications.html">publications</a>
+			<a href="talks.html">talks</a>
+			<!-- <a href="blog.html" class="active">blog</a>
+			<a href="courses.html" class="disabled">courses</a> -->
+			<!-- <a href="repositories.html" class="disabled">codes</a> -->
+			<a href="contact.html">CV</a>
+		</div>
+		<button class="theme-btn" id="theme-toggle" aria-label="Toggle color theme">dark</button>
+	</div>
+</nav>
+
+<div class="page-header wrap">
+	<div class="eyebrow">Placeholder</div>
+	<h1>Blog</h1>
+</div>
+
+<section>
+	<div class="wrap">
+		<div class="placeholder-box">
+			<span class="tag">reserved slot</span><br>
+			No posts yet. Likely to be deprioritized or moved elsewhere later.
+		</div>
+	</div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

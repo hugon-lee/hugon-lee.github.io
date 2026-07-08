@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research &mdash; Hugon Lee</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>
+	(function () {
+		var stored = localStorage.getItem("theme-preference");
+		var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+		document.documentElement.setAttribute("data-theme", theme);
+	})();
+</script>
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-page="research">
+
+<div id="nav-placeholder"></div>
+
+
+<div class="page-header wrap">
+	<!-- <div class="eyebrow">Overview</div> -->
+	<h1>research overview</h1>
+	<!-- <p class="desc">
+		dd
+	</p> -->
+</div>
+
+<section>
+	<div class="wrap">
+
+		<div class="thread is-open">
+			<!-- <div class="thread-toggle">
+				<h3>Overview</h3>
+				<span class="thread-chevron">&#9660;</span>
+			</div> -->
+			<div class="thread-body">
+				<div class="spacer" style="height: 4px;"></div>
+				<p>
+					My research develops physics-grounded, cost-efficient methods for predicting and designing the mechanical behavior of <b>composite materials</b> and their <b>manufacturing processes</b>. Starting from analytic micromechanics of interface- and interphase-dominated composites, I extend toward data-driven surrogates for cost-constrained design problems, and am now working to embed this physical knowledge into large language model-based agentic systems for automated micromechanical analysis.
+				</p>
+			</div>
+		</div>
+
+		<div class="thread">
+			<div class="thread-toggle">
+				<h3>Micromechanics with interface / interphase effects</h3>
+				<span class="thread-chevron">&#9660;</span>
+			</div>
+			<div class="thread-body">
+				<div class="spacer" style="height: 4px;"></div>
+				<p>
+					<b>Interface</b> (2D border) or <b>interphase</b> (3D bulk) between phases in <b>heterogeneous media</b> often govern macroscopic mechanical and functional properties, particularly for nano-heterogeneities with high area-to-volume ratio.
+					My Ph.D. thesis analytically treated three matrix-inclusion composite systems with pronounced interface/interphase effects: mechanoluminescent composites with weak interface, liquid metal-elastomer composites with stiff metal oxide shells, and PA-GnP-GF hybrid composites with functionally graded interphases.
+					Benchmarked against numerical results, these analytic methods achieved good prediction accuracy at a fraction of the computational cost, though they remain limited to specific inclusion geometries and simplified phase behavior.
+					This motivates the data-driven extensions developed in my more recent work (manuscript in preparation).
+				</p>
+				<div class="thread-figure">
+					<img src="assets/img/research/micromech-int.jpg" alt="Micromechanics concept with interface/interphase">
+				</div>
+				<div class="thread-caption">Micromechanics concept with interface/interphase and various methods for solving micro-problems. <span class="caveat">Figure modified from my Ph.D. thesis.</span></div>
+				<div class="thread-refs">
+					Related: <a href="publications.html#lee2024mean">Lee et al., JPCM (2024)</a> &middot;
+					<a href="publications.html#jo2024innovative">Jo et al., Addit. Manuf. (2024)</a> &middot;
+					Lee, Jo, et al., In preparation. &middot; Lee, Sansone, et al., In preparation. &middot; Lee and Ryu, In preparation.
+				</div>
+			</div>
+		</div>
+
+		<div class="thread">
+			<div class="thread-toggle">
+				<h3>Process modeling of polymeric materials</h3>
+				<span class="thread-chevron">&#9660;</span>
+			</div>
+			<div class="thread-body">
+				<div class="spacer" style="height: 4px;"></div>
+				<p>
+					Manufacturing processes govern the phase properties and microstructural state of materials, directly affecting both macroscopic properties and dimensional accuracy.
+					<b>Injection molding</b>, one of the most widely used mass-production process for polymeric composites, depends critically on process parameters and part design, making pre-fabrication simulation essential.
+					Since this simulation is high-cost and complex, I developed data-driven process parameter optimization methods under <b>data scarcity</b>.
+				</p>
+				<div class="thread-figure">
+					<img src="assets/img/research/im-modeling.jpg" alt="Deep Material Network conceptual architecture">
+				</div>
+				<div class="thread-caption">Schematic illustration of injection molding procedure and exemplar process simulation results depicting residual deformation.</div>
+				<div class="thread-refs">
+					Related: <a href="publications.html#jung2024comparative">Jung et al., ATS (2024)</a> &middot;
+					<a href="publications.html#lee2024enhancing">Lee et al., ATS (2024)</a> &middot;
+					<a href="publications.html#lee2025toward">Lee et al., AID (2025)</a> &middot;
+					<a href="publications.html#lee2025bayesian">Lee et al., J Manuf. Proc. (2025)</a>
+				</div>
+				<div class="spacer" style="height: 12px;"></div>
+				<p>
+					<b>Digital light processing (DLP)</b>, a vat photopolymerization additive manufacturing technique, enables fast, direct fabrication of arbitrarily-shaped polymeric parts, but suffers from dimensional inaccuracies in complex processing windows, especially for particle-filled resins.
+					I developed a finite element modeling procedure using ABAQUS that reproduces experimentally observed deformation trends and curing states (manuscript in preparation; Lee, Jo and Ryu, ICTAM 2024 talk).
+				</p>
+				<div class="thread-figure">
+					<img src="assets/img/research/dlp-modeling.jpg" alt="Deep Material Network conceptual architecture">
+				</div>
+				<div class="thread-caption">Bottom-up DLP procedure and process simulation results for complex geometry.</div>
+				<div class="thread-refs">
+					Related: <a href="publications.html#jo2024innovative">Jo et al., Addit. Manuf. (2024)</a> &middot;
+					Lee, Jo, et al. In preparation.
+				</div>
+			</div>
+		</div>
+
+
+		<div class="thread">
+			<div class="thread-toggle">
+				<h3>Data-driven design under data scarcity</h3>
+				<span class="thread-chevron">&#9660;</span>
+			</div>
+			<div class="thread-body">
+				<div class="spacer" style="height: 4px;"></div>
+				<p>
+					Engineering data is expensive to generate, and standard machine learning (ML) methods, suited primarily to in-distribution prediction, struggle under this <b>data scarcity</b> (<a href="https://doi.org/10.1039/D3MH00039G" target="_blank" rel="noopener">Lee et al. (2023)</a>; <a href="https://doi.org/10.1002/aidi.202500107" target="_blank" rel="noopener">Lee et al. (2025)</a>).
+					<b>Multi-fidelity (MF)</b> methods (while standard methods called single-fidelity; SF) address this by combining cheap, approximate low-fidelity (LF) data with costly, accurate high-fidelity (HF) data.
+					My research investigated material transfer scenario in injection molding process design, and combined analytic low-fidelity data with experimental high-fidelity data to construct data-efficient surrogate for short fiber reinforced plastics (manuscript in preparation).
+				</p>
+				<div class="thread-figure">
+					<img src="assets/img/research/mf-surrogate.jpg" alt="Bayesian optimization workflow for injection molding process design">
+				</div>
+				<div class="thread-caption">Multi-fidelity surrogates: Gaussian process and neural network.</div>
+				<div class="thread-refs">
+					Related: <a href="publications.html#lee2024enhancing">Lee et al., ATS (2024)</a> &middot;
+					Lee, Sansone, et al. In preparation. &middot; Serles, Yeo, Lee et al., In preparation.
+				</div>
+				<div class="spacer" style="height: 12px;"></div>
+				<p>
+					<b>Bayesian optimization (BO)</b> complements both standard and MF surrogates as a data-efficient global optimization technique, using an acquisition function to balance exploration (search for underexplored designs) and exploitation (search for optimal designs) under a limited sampling budget.
+					I applied BO to injection molding process optimization, battery thermal management system design, and automotive tailgate rib design.
+				</p>
+				<div class="thread-figure">
+					<img src="assets/img/research/bo-concept.jpg" alt="Bayesian optimization workflow">
+				</div>
+				<div class="thread-caption">Bayesian optimization procedure and the acquisition function.</div>
+				<div class="thread-refs">
+					Related: <a href="publications.html#lee2024enhancing">Lee et al., ATS (2024)</a> &middot;
+					<a href="publications.html#cho2025sequential">Cho et al., J Energy Storage (2025)</a> &middot;
+					<a href="publications.html#lee2025bayesian">Lee et al., J Manuf. Proc. (2025)</a>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="thread">
+			<div class="thread-toggle">
+				<h3>Outlook: PIML and agentic AI</h3>
+				<span class="thread-chevron">&#9660;</span>
+			</div>
+			<div class="thread-body">
+				<div class="spacer" style="height: 4px;"></div>
+				<p>
+					Purely data-driven methods face key limitations: heavy data requirement, poor out-of-distribution performance, and no guarantee of physical consistency.
+					<b>Physics-informed machine learning (PIML)</b> addresses these by incorporating physical knowledge into ML systems.
+					While standard methods like physics-informed neural networks (PINNs) enforce physical consistency, they struggle to generalize across unseen physics, geometry, and boundary conditions.
+					In micromechanics context, <b>Deep material networks</b> (DMNs; <a href="https://doi.org/10.1016/j.cma.2018.09.020" target="_blank" rel="noopener">Liu et al., 2019</a>) take a complementary, numerical-data-driven approach to this problem.
+					My current research develops DMN in an interface-enriched setting (manuscript in preparation).
+				</p>
+				<div class="thread-figure">
+					<img src="assets/img/research/piml.jpg" alt="Classification of PIML methods">
+				</div>
+				<div class="thread-caption">Classification of PIML methods (upper) and typical role of PIML in forward surrogate modeling (lower). <span class="caveat">Upper figure modified from <a href="https://www.youtube.com/watch?v=wi5-gYdawn4" target="_blank" rel="noopener">Circirello (2023)</a>.</span></div>
+				<div class="thread-refs">
+					Related: <a href="publications.html#lee2025toward">Lee et al., AID (2025)</a> &middot;
+					Lee and Ryu, In preparation.
+				</div>
+				<div class="spacer" style="height: 12px;"></div>
+				<p>
+					<b>Large language models (LLMs)</b> are transforming nearly all domain of engineering, but direct use of generic models suffers from inconsistency and hallucination.
+					Recent studies address this by incorporating domain knowledge through strategies such as retrieval-augmented generation and multi-agent orchestration with external tools (<a href="https://doi.org/10.1002/aidi.202500107" target="_blank" rel="noopener">Lee et al., 2025</a>).
+					My current research applies these strategies to design a multi-agent LLM system for assisting and automating micromechanical analyses.
+				</p>
+				<div class="thread-figure">
+					<img src="assets/img/research/llm-util.jpg" alt="Methods for utilizing LLMs in engineering problems">
+				</div>
+				<div class="thread-caption">Strategies for utilizing LLMs in engineering problems. <span class="caveat">Figure modified from <a href="https://doi.org/10.1002/aidi.202500107" target="_blank" rel="noopener">Lee et al. (2025)</a>.</span></div>
+				<div class="thread-refs">
+					Related: <a href="publications.html#lee2025toward">Lee et al., AID (2025)</a> &middot;
+					Lee, Lee and Ryu, In preparation.
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<div class="lightbox-overlay" id="lightbox">
+	<img src="" alt="" id="lightbox-img">
+</div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

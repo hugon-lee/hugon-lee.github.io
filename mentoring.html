@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research &mdash; Hugon Lee</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>
+	(function () {
+		var stored = localStorage.getItem("theme-preference");
+		var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+		document.documentElement.setAttribute("data-theme", theme);
+	})();
+</script>
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-page="mentoring">
+
+<div id="nav-placeholder"></div>
+
+<div class="page-header wrap">
+	<!-- <div class="eyebrow">Mentoring &amp; teaching</div> -->
+	<h1>teaching / mentoring</h1>
+</div>
+
+<section>
+	<div class="wrap">
+		<h2>Student mentoring</h2>
+		<div class="mentor-grid">
+			<div class="mentor-card">
+				<div class="mentor-name">Inhyo Lee</div>
+				<div class="mentor-period">Jan 2025 &ndash; Oct 2025</div>
+				<div class="mentor-desc">Research design and manuscript preparation; published in <em>Physical Chemistry Chemical Physics</em></div>
+			</div>
+			<div class="mentor-card">
+				<div class="mentor-name">Sangwoo Jung</div>
+				<div class="mentor-period">Jun 2024 &ndash; Oct 2025</div>
+				<div class="mentor-desc">Master's research: modeling of DLP additive manufacturing process</div>
+			</div>
+			<div class="mentor-card">
+				<div class="mentor-name">Hanbin Cho</div>
+				<div class="mentor-period">Aug 2023 &ndash; Aug 2024</div>
+				<div class="mentor-desc">Master's research: numerical analysis and Bayesian optimization; published in <em>Journal of Energy Storage</em></div>
+			</div>
+			<div class="mentor-card">
+				<div class="mentor-name">Hyeonseong Jo</div>
+				<div class="mentor-period">Feb 2021 &ndash; Feb 2022</div>
+				<div class="mentor-desc">Master's research: experimental design, permeability analysis, numerical modeling</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="wrap">
+		<h2>Academic talks</h2>
+		<div class="mentor-grid">
+			<div class="mentor-card">
+				<div class="mentor-name">2026 Winter AI Class, Korean Society for Composite Materials (KSCM)</div>
+				<div class="mentor-period">Feb 2026</div>
+				<div class="mentor-desc">Lecture and hands-on tutorial on LLM usage and tool-calling for homogenization workflows</div>
+			</div>
+			<div class="mentor-card">
+				<div class="mentor-name">Invited talk, Prof. Patrick C. Lee group, University of Toronto</div>
+				<div class="mentor-period">Nov 2023</div>
+				<div class="mentor-desc">Introduction to multi-fidelity machine learning and its utilization for experimental data</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<div id="footer-placeholder"></div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

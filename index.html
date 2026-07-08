@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hugon Lee</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>
+	(function () {
+		var stored = localStorage.getItem("theme-preference");
+		var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+		document.documentElement.setAttribute("data-theme", theme);
+	})();
+</script>
+<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body data-page="index">
+
+<div id="nav-placeholder"></div>
+
+<header class="hero">
+	<div class="wrap">
+
+		<div class="hero-body">
+			<div class="hero-photo">
+				<img src="assets/img/hugon_lee4.jpg" alt="Hugon Lee">
+			</div>
+			<div class="hero-text">
+				<!-- <h1><span class="underline">Hugon Lee</span> (<span class="name-kr">이 후 곤</span>)</h1> -->
+				<h1>Hugon Lee (<span class="name-kr">이 후 곤</span>)</h1>
+				<div class="spacer" style="height: 8px;"></div>
+				<div class="eyebrow">
+					Ph.D. Candidate &rarr; Postdoctoral Researcher &mdash; Mechanical Engineering, KAIST
+				</div>
+				<p class="role">
+					Hi, I am <em>Hugon Lee</em>, a Ph.D. candidate in Mechanical Engineering at the Korea Advanced Institute of Science and Technology (KAIST), advised by <a href="https://sites.google.com/site/seunghwalab/">Prof. Seunghwa Ryu</a>.
+					I recently defended my Ph.D. dissertation and will officially receive my degree in August 2026.
+					After graduation, I will be joining postdoctoral fellowship at InnoCORE PRISM-AI center at KAIST.
+					<br><br>My research focuses on the <em>micromechanical analysis of composite materials</em>, particularly interface and interphase effects, using computational, analytical, and data-driven methods.
+					I have also studied process and property modeling of materials to describe experimental outcomes, incorporating machine learning for design and optimization in data-scarce scenarios.
+					My recent research interests include applying physics-informed machine learning and agentic AI frameworks to the analysis of composites.
+				</p>
+				<div class="links">
+					<a href="https://scholar.google.com/citations?user=jv38NJMAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Google Scholar</a>
+					<a href="https://www.linkedin.com/in/hugon-lee-3b49a5238" target="_blank" rel="noopener">LinkedIn</a>
+					<a href="https://orcid.org/0009-0008-2413-1968" target="_blank" rel="noopener">ORCID</a>
+					<a href="https://github.com/hugon-lee" target="_blank" rel="noopener">GitHub</a>
+					<a href="mailto:hoogon99@kaist.ac.kr">hoogon99@kaist.ac.kr</a>
+				</div>
+				<div class="spacer" style="height: 8px;"></div>
+				<p style="margin-top:14px; margin-right:0px; text-align:right;"><a href="research.html">Full research overview &rarr;</a></p>
+			</div>
+		</div>
+	</div>
+</header>
+
+<section id="news">
+	<div class="wrap">
+		<h2>News</h2>
+		<ul class="news-list" id="news-list-auto" data-limit="5"></ul>
+		<p style="margin-top:14px; text-align:right;"><a href="news.html">All news &rarr;</a></p>
+	</div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
