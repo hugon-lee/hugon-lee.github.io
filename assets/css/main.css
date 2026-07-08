@@ -271,9 +271,6 @@ section > .wrap > h2 {
 
 .news-item:last-child { border-bottom: none; }
 
-/* .news-item .badge {
-	margin-right: 8px;
-} */
 .news-item .badge {
 	margin-left: 4px;
 }
@@ -512,10 +509,6 @@ ol.pub-list, ol.talk-list { list-style: none; margin: 0; padding: 0; }
 	border: 1px dashed var(--rule);
 	background: transparent;
 	display: none; /* set to "block" while placing real images to see the empty slots */
-}
-
-@media (max-width: 600px) {
-	.pub-thumb { flex-basis: 64px; width: 64px; }
 }
 
 .pub-badges { display: inline-flex; gap: 6px; vertical-align: middle; margin-right: 2px; }
@@ -838,18 +831,7 @@ footer.site-footer .copyright {
 	text-align: center;
 }
 
-/* ---------- Responsive ---------- */
-
-@media (max-width: 600px) {
-	.hero-text h1, .hero .underline { font-size: 26px; }
-	.hero-body { flex-direction: column; align-items: flex-start; }
-	.hero-photo { width: 96px; height: 96px; }
-	nav .nav-links { gap: 14px; font-size: 13px; }
-	.pub-venue a { display: block; margin-left: 0; margin-top: 2px; }
-	.news-item { flex-direction: column; gap: 2px; }
-	.news-date { width: auto; }
-}
-
+/* ---------- Lightbox ---------- */
 
 .lightbox-overlay {
 	position: fixed;
@@ -878,69 +860,45 @@ footer.site-footer .copyright {
 	cursor: zoom-in;
 }
 
-
 /* ============================================
-   Mobile spacing pass — applies uniformly across all pages
+   Mobile responsive — single consolidated block
+   (previously split across 5 separate blocks; merged
+   here to avoid silent overrides between them)
    ============================================ */
 @media (max-width: 600px) {
-	.wrap {
-		padding: 0 18px;
-	}
-
-	header.hero {
-		padding: 44px 0 32px;
-	}
-
-	.page-header {
-		padding: 32px 0 4px;
-	}
-
-	section {
-		padding: 28px 0;
-	}
-
-	.thread {
-		margin-top: 4px;
-	}
-
-	.thread-toggle h3 {
-		font-size: 16px;
-	}
-
-	.grant-entry {
-		gap: 14px;
-		padding: 16px 0;
-	}
-
-	.pub {
-		gap: 12px;
-	}
-
-	.pub-title {
-		font-size: 14.5px;
-	}
-
-	.contact-grid {
-		gap: 18px;
-	}
-
-	.news-item {
-		gap: 4px;
-	}
-
-	.nav-links {
-		gap: 12px;
-		font-size: 12.5px;
-	}
-}
-
-@media (max-width: 600px) {
+	/* Layout base */
 	.wrap {
 		padding: 0 20px;
 	}
 
-	.page-header h1 {
+	/* Nav */
+	nav .wrap {
+		height: auto;
+		min-height: 56px;
+		padding: 10px 20px;
+		flex-wrap: wrap;
+		row-gap: 8px;
+	}
+
+	nav .nav-links {
+		gap: 12px;
+		font-size: 12.5px;
+	}
+
+	/* Hero (home page) */
+	.hero-text h1,
+	.hero .underline {
 		font-size: 26px;
+	}
+
+	.hero-body {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.hero-photo {
+		width: 96px;
+		height: 96px;
 	}
 
 	.hero-text .links {
@@ -948,17 +906,78 @@ footer.site-footer .copyright {
 		column-gap: 16px;
 	}
 
+	header.hero {
+		padding: 44px 0 32px;
+	}
+
+	/* Page header (non-home pages) */
+	.page-header {
+		padding: 32px 0 20px;
+	}
+
+	.page-header h1 {
+		font-size: 26px;
+	}
+
+	/* Section shell */
+	section {
+		padding: 28px 0;
+	}
+
+	/* Research threads */
+	.thread {
+		margin-top: 20px;
+	}
+
+	.thread-toggle {
+		padding: 4px 0;
+	}
+
+	.thread-toggle h3 {
+		font-size: 16px;
+		line-height: 1.4;
+	}
+
+	/* Projects (funded) */
+	.grant-entry {
+		gap: 14px;
+		padding: 16px 0;
+	}
+
+	/* Publications */
+	.pub {
+		gap: 12px;
+	}
+
+	.pub-thumb {
+		flex-basis: 64px;
+		width: 64px;
+	}
+
+	.pub-title {
+		font-size: 14.5px;
+	}
+
+	.pub-venue a {
+		display: block;
+		margin-left: 0;
+		margin-top: 2px;
+	}
+
+	/* News */
+	.news-item {
+		flex-direction: column;
+		gap: 2px;
+	}
+
+	.news-date {
+		width: auto;
+	}
+
+	/* CV */
 	.contact-grid {
 		row-gap: 10px;
 		column-gap: 24px;
-	}
-
-	nav .wrap {
-		height: auto;
-		min-height: 56px;
-		padding: 10px 0;
-		flex-wrap: wrap;
-		row-gap: 8px;
 	}
 
 	.cv-entry-header {
