@@ -877,3 +877,59 @@ footer.site-footer .copyright {
 .pub-thumb img {
 	cursor: zoom-in;
 }
+
+
+/* ============================================
+   Mobile spacing pass — applies uniformly across all pages
+   ============================================ */
+@media (max-width: 600px) {
+	.wrap {
+		padding: 0 18px;
+	}
+
+	header.hero {
+		padding: 44px 0 32px;
+	}
+
+	.page-header {
+		padding: 32px 0 4px;
+	}
+
+	section {
+		padding: 28px 0;
+	}
+
+	.thread {
+		margin-top: 4px;
+	}
+
+	.thread-toggle h3 {
+		font-size: 16px;
+	}
+
+	.grant-entry {
+		gap: 14px;
+		padding: 16px 0;
+	}
+
+	.pub {
+		gap: 12px;
+	}
+
+	.pub-title {
+		font-size: 14.5px;
+	}
+
+	.contact-grid {
+		gap: 18px;
+	}
+
+	.news-item {
+		gap: 4px;
+	}
+
+	.nav-links {
+		gap: 12px;
+		font-size: 12.5px;
+	}
+}
