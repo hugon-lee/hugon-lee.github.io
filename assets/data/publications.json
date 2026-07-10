@@ -1,0 +1,197 @@
+[
+	{
+		"id": "kim2026morphology",
+		"year": "2026",
+		"image": "assets/img/publications/kim2026morphology.jpg",
+		"badges": [],
+		"title": "Morphology-, noise-, and resolution-robust ultrasound elasticity imaging with Fourier neural operator",
+		"authors": "Kim, H., <span class=\"me\">Lee, H.</span>, Park, M. and Ryu, S.<sup>*</sup>",
+		"venue": "<em>Computer Methods and Programs in Biomedicine 283</em>, 109432 (2026)",
+		"doi": "https://doi.org/10.1016/j.cmpb.2026.109432"
+	},
+	{
+		"id": "lee2026comparative",
+		"year": "2026",
+		"image": "assets/img/publications/lee2026comparative.jpg",
+		"badges": [],
+		"title": "Comparative assessment of composition- and structure-based surrogate models across 2D materials databases",
+		"authors": "Lee, I., Chae, H., Park, J., Shin, J., <span class=\"me\">Lee, H.</span><sup>*</sup> and Ryu, S.<sup>*</sup>",
+		"venue": "<em>Physical Chemistry Chemical Physics 28</em>(16), 10119&ndash;10130 (2026)",
+		"doi": "https://doi.org/10.1039/D5CP04814A"
+	},
+	{
+		"id": "cho2025comparative",
+		"year": "2025",
+		"image": "assets/img/publications/cho2025comparative.jpg",
+		"badges": [],
+		"title": "Comparative study of Gaussian process and additive Gaussian process for multi-objective optimization in air-cooled battery thermal management systems",
+		"authors": "Cho, H., Kim, M., Park, Y., <span class=\"me\">Lee, H.</span>, Lee, I. and Ryu, S.<sup>*</sup>",
+		"venue": "<em>Journal of Mechanical Science and Technology 29</em>(12), 7623&ndash;7634 (2025)",
+		"doi": "https://doi.org/10.1007/s12206-025-1123-3"
+	},
+	{
+		"id": "lee2025toward",
+		"year": "2025",
+		"image": "assets/img/publications/lee2025toward.jpg",
+		"badges": [
+			{
+				"type": "type",
+				"label": "PERSPECTIVE"
+			}
+		],
+		"title": "Toward knowledge-guided AI for inverse design in manufacturing: a perspective on domain, physics, and human-AI synergy",
+		"authors": "<span class=\"me\">Lee, H.</span><sup>&dagger;</sup>, Moon, H.<sup>&dagger;</sup>, Lee, J.<sup>&dagger;</sup> and Ryu, S.<sup>*</sup>",
+		"venue": "<em>Advanced Intelligent Discovery</em>, e202500107 (2025)",
+		"doi": "https://doi.org/10.1002/aidi.202500107"
+	},
+	{
+		"id": "cho2025sequential",
+		"year": "2025",
+		"image": "assets/img/publications/cho2025sequential.jpg",
+		"badges": [],
+		"title": "Sequential multi-objective Bayesian optimization of air-cooled battery thermal management system with spoiler integration",
+		"authors": "Cho, H., <span class=\"me\">Lee, H.</span> and Ryu, S.<sup>*</sup>",
+		"venue": "<em>Journal of Energy Storage 114</em>, 115586 (2025)",
+		"doi": "https://doi.org/10.1016/j.est.2025.115586"
+	},
+	{
+		"id": "lee2025bayesian",
+		"year": "2025",
+		"image": "assets/img/publications/lee2025bayesian.jpg",
+		"badges": [],
+		"title": "Bayesian optimization of tailgate rib structures enhancing structural stiffness under manufacturing constraints of injection molding",
+		"authors": "<span class=\"me\">Lee, H.</span><sup>&dagger;</sup>, Yeo, J.<sup>&dagger;</sup>, Kong, K., Myeong, D., Jang, D., Lee, J., Choi, H., Kim, N.<sup>*</sup> and Ryu, S.<sup>*</sup>",
+		"venue": "<em>Journal of Manufacturing Processes 134</em>, 739&ndash;748 (2025)",
+		"doi": "https://doi.org/10.1016/j.jmapro.2024.12.064"
+	},
+	{
+		"id": "lee2024mean",
+		"year": "2024",
+		"image": "assets/img/publications/lee2024mean.jpg",
+		"badges": [],
+		"title": "Mean-field homogenization of liquid metal elastomer composites: comparative study and exact dilute solution of core-shell inclusion",
+		"authors": "<span class=\"me\">Lee, H.</span>, Yeo, J., Yu, J., Moon, H. and Ryu, S.<sup>*</sup>",
+		"venue": "<em>Journal of Physics: Condensed Matter 36</em>(50), 505702 (2024)",
+		"doi": "https://doi.org/10.1088/1361-648X/ad765e"
+	},
+	{
+		"id": "lee2024enhancing",
+		"year": "2024",
+		"image": "assets/img/publications/lee2024enhancing.jpg",
+		"badges": [],
+		"title": "Enhancing injection molding optimization for SFRPs through multi-fidelity data-driven approaches incorporating prior information in limited data environments",
+		"authors": "<span class=\"me\">Lee, H.</span><sup>&dagger;</sup>, Lee, M.<sup>&dagger;</sup>, Jung, J., Lee, I.<sup>*</sup> and Ryu, S.<sup>*</sup>",
+		"venue": "<em>Advanced Theory and Simulations 7</em>(8), 2400130 (2024)",
+		"doi": "https://doi.org/10.1002/adts.202400130"
+	},
+	{
+		"id": "jo2024data",
+		"year": "2024",
+		"image": "assets/img/publications/jo2024data.jpg",
+		"badges": [],
+		"title": "Data-driven prediction of strain fields in auxetic structures and non-contact validation with mechanoluminescence for structural health monitoring",
+		"authors": "Jo, J.<sup>&dagger;</sup>, Park, M.<sup>&dagger;</sup>, Kang, S.<sup>&dagger;</sup>, <span class=\"me\">Lee, H.</span><sup>&dagger;</sup>, Gu, C.-Y., Kim, T.-S. and Ryu, S.<sup>*</sup>",
+		"venue": "<em>International Journal of AI for Materials and Design 1</em>(2), 48&ndash;60 (2024)",
+		"doi": "https://doi.org/10.36922/ijamd.3539"
+	},
+	{
+		"id": "jung2024comparative",
+		"year": "2024",
+		"image": "assets/img/publications/jung2024comparative.jpg",
+		"badges": [],
+		"title": "Comparative study of multi-objective Bayesian optimization and NSGA-III based approaches for injection molding process",
+		"authors": "Jung, J., Park, K., <span class=\"me\">Lee, H.</span>, Cho, B. and Ryu, S.<sup>*</sup>",
+		"venue": "<em>Advanced Theory and Simulations 7</em>(7), 2400135 (2024)",
+		"doi": "https://doi.org/10.1002/adts.202400135"
+	},
+	{
+		"id": "jo2024innovative",
+		"year": "2024",
+		"image": "assets/img/publications/jo2024innovative.jpg",
+		"badges": [],
+		"title": "Innovative 3D printing of mechanoluminescent composites: vat photopolymerization meets machine learning",
+		"authors": "Jo, J.<sup>&dagger;</sup>, Park, K.<sup>&dagger;</sup>, Song, H.<sup>&dagger;</sup>, <span class=\"me\">Lee, H.</span> and Ryu, S.<sup>*</sup>",
+		"venue": "<em>Additive Manufacturing 90</em>, 104324 (2024)",
+		"doi": "https://doi.org/10.1016/j.addma.2024.104324"
+	},
+	{
+		"id": "park2024deep",
+		"year": "2024",
+		"image": "assets/img/publications/park2024deep.jpg",
+		"badges": [],
+		"title": "Deep generative spatiotemporal learning for integrating fracture mechanics in composite materials: inverse design, discovery, and optimization",
+		"authors": "Park, D.<sup>&dagger;</sup>, Lee, J.<sup>&dagger;</sup>, <span class=\"me\">Lee, H.</span>, Gu, G. X. and Ryu, S.<sup>*</sup>",
+		"venue": "<em>Materials Horizons 11</em>(13), 3048&ndash;3065 (2024)",
+		"doi": "https://doi.org/10.1039/D4MH00337C"
+	},
+	{
+		"id": "lee2023advancements",
+		"year": "2023",
+		"image": "assets/img/publications/lee2023advancements.jpg",
+		"badges": [
+			{
+				"type": "type",
+				"label": "REVIEW"
+			}
+		],
+		"title": "Advancements and challenges of micromechanics-based homogenization for the short fiber reinforced composites",
+		"authors": "<span class=\"me\">Lee, H.</span>, Lee, S.<sup>*</sup> and Ryu, S.<sup>*</sup>",
+		"venue": "<em>Multiscale Science and Engineering 5</em>(3), 133&ndash;146 (2023)",
+		"doi": "https://doi.org/10.1007/s42493-024-00100-2"
+	},
+	{
+		"id": "lee2023machine",
+		"year": "2023",
+		"image": "assets/img/publications/lee2023machine.jpg",
+		"badges": [
+			{
+				"type": "type",
+				"label": "REVIEW"
+			}
+		],
+		"title": "Machine learning-based inverse design methods considering data characteristics and design space size in materials design and manufacturing: a review",
+		"authors": "Lee, J., Park, D., Lee, M., <span class=\"me\">Lee, H.</span>, Park, K., Lee, I. and Ryu, S.<sup>*</sup>",
+		"venue": "<em>Materials Horizons 10</em>(12), 5436&ndash;5456 (2023)",
+		"doi": "https://doi.org/10.1039/D3MH00039G"
+	},
+	{
+		"id": "parkforecasting",
+		"year": "In progress",
+		"image": "assets/img/publications/parkforecasting.jpg",
+		"badges": [
+			{
+				"type": "status",
+				"label": "UNDER REVIEW"
+			}
+		],
+		"title": "Forecasting long-term spatial-temporal dynamics with generative transformer networks",
+		"authors": "Park, D., <span class=\"me\">Lee, H.</span>, and Ryu, S.<sup>*</sup>",
+		"venue": "engrXiv preprint 10.31224/4295 (2025)",
+		"doi": "https://doi.org/10.31224/4295"
+	},
+	{
+		"id": "lee2026phdthesis",
+		"year": "Thesis",
+		"image": "assets/img/publications/lee2026micromechanical.jpg",
+		"badges": [
+			{
+				"type": "status",
+				"label": "TO APPEAR"
+			}
+		],
+		"title": "Micromechanical modeling and analysis of composites with interface and interphase effects",
+		"authors": "<span class=\"me\">Lee, H.</span>",
+		"venue": "<em>Ph.D. dissertation</em>, KAIST, Republic of Korea (Aug 2026)",
+		"doi": null
+	},
+	{
+		"id": "lee2022msthesis",
+		"year": "Thesis",
+		"image": "assets/img/publications/lee2020study.jpg",
+		"badges": [],
+		"title": "(A) study on permeability prediction of fiber-reinforced composite materials based on the representative volume element",
+		"authors": "<span class=\"me\">Lee, H.</span>",
+		"venue": "<em>Master thesis</em>, KAIST, Republic of Korea (Feb 2022)",
+		"doi": "https://library.kaist.ac.kr/search/detail/view.do?bibCtrlNo=997656&flag=dissertation"
+	}
+]

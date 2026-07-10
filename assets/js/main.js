@@ -25,25 +25,273 @@
 		const newsListEl = document.getElementById("news-list-auto");
 		if (newsListEl) {
 			const limit = parseInt(newsListEl.getAttribute("data-limit"), 10) || null;
+			const pageSize = parseInt(newsListEl.getAttribute("data-page-size"), 10) || null;
+			const paginationEl = document.getElementById("news-pagination");
+
 			fetch("assets/data/news.json")
 				.then(function (res) { return res.json(); })
+				.then(function (allItems) {
+					const items = limit ? allItems.slice(0, limit) : allItems;
+
+					function renderPage(page) {
+						let toRender = items;
+						if (pageSize) {
+							const start = (page - 1) * pageSize;
+							toRender = items.slice(start, start + pageSize);
+						}
+
+						newsListEl.innerHTML = toRender.map(function (item, idx) {
+							var badgeHtml = item.badge
+								? '<span class="badge badge-status">' + item.badge + '</span>'
+								: '';
+							var subHtml = item.sub
+								? '<span class="news-sub">' + item.sub + '</span>'
+								: '';
+							var textHtml = item.link
+								? '<a href="' + item.link + '" target="_blank" rel="noopener">' + item.text + '</a>'
+								: item.text;
+
+							var hasDetail = !!item.detail;
+							var chevronHtml = hasDetail
+								? '<span class="news-chevron">&#9660;</span>'
+								: '';
+							var detailHtml = '';
+							if (hasDetail) {
+								var detailImgHtml = item.detail.image
+									? '<img src="' + item.detail.image + '" alt="">'
+									: '';
+								var detailTextHtml = item.detail.text
+									? '<p>' + item.detail.text + '</p>'
+									: '';
+								detailHtml = '<div class="news-detail"><div class="news-detail-inner">'
+									+ detailTextHtml + detailImgHtml
+									+ '</div></div>';
+							}
+
+							var rowClass = hasDetail ? 'news-item-row has-detail' : 'news-item-row';
+
+							return '<li class="news-item" data-idx="' + idx + '">'
+								+ '<div class="' + rowClass + '">'
+								+ '<span class="news-date">' + item.date + '</span>'
+								+ '<div class="news-main">'
+								+ '<div class="news-title-line">'
+								+ '<span>' + textHtml + ' ' + badgeHtml + '</span>'
+								+ chevronHtml
+								+ '</div>'
+								+ subHtml
+								+ '</div>'
+								+ '</div>'
+								+ detailHtml
+								+ '</li>';
+						}).join('');
+
+						newsListEl.querySelectorAll('.news-item-row.has-detail').forEach(function (row) {
+							row.addEventListener('click', function () {
+								row.closest('.news-item').classList.toggle('is-open');
+							});
+						});
+
+						var overlay = document.getElementById('lightbox');
+						var overlayImg = document.getElementById('lightbox-img');
+						if (overlay && overlayImg) {
+							newsListEl.querySelectorAll('.news-detail-inner img').forEach(function (img) {
+								img.addEventListener('click', function () {
+									overlayImg.src = img.src;
+									overlayImg.alt = img.alt;
+									overlay.classList.add('is-open');
+								});
+							});
+						}
+					}
+
+					function renderPagination(currentPage) {
+						if (!paginationEl || !pageSize) return;
+						var totalPages = Math.ceil(items.length / pageSize);
+						if (totalPages <= 1) {
+							paginationEl.innerHTML = '';
+							return;
+						}
+						var html = '';
+						for (var p = 1; p <= totalPages; p++) {
+							var activeClass = p === currentPage ? ' active' : '';
+							html += '<button class="page-btn' + activeClass + '" data-page="' + p + '">' + p + '</button>';
+						}
+						paginationEl.innerHTML = html;
+
+						paginationEl.querySelectorAll('.page-btn').forEach(function (btn) {
+							btn.addEventListener('click', function () {
+								var page = parseInt(btn.getAttribute('data-page'), 10);
+								renderPage(page);
+								renderPagination(page);
+								newsListEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+							});
+						});
+					}
+
+					renderPage(1);
+					renderPagination(1);
+				});
+		}
+
+		// ---------- Publications ----------
+		const pubListEl = document.getElementById("pub-list-auto");
+		if (pubListEl) {
+			const pubPageSize = parseInt(pubListEl.getAttribute("data-page-size"), 10) || null;
+			const pubPaginationEl = document.getElementById("pub-pagination");
+
+			fetch("assets/data/publications.json")
+				.then(function (res) { return res.json(); })
 				.then(function (items) {
-					const toRender = limit ? items.slice(0, limit) : items;
-					newsListEl.innerHTML = toRender.map(function (item) {
-						const badgeHtml = item.badge
-							? '<span class="badge badge-status">' + item.badge + '</span>'
-							: '';
-						const subHtml = item.sub
-							? '<span class="news-sub">' + item.sub + '</span>'
-							: '';
-						const textHtml = item.link
-							? '<a href="' + item.link + '" target="_blank" rel="noopener">' + item.text + '</a>'
-							: item.text;
-						return '<li class="news-item">'
-							+ '<span class="news-date">' + item.date + '</span>'
-							+ '<span>' + textHtml + ' ' + badgeHtml + subHtml + '</span>'
-							+ '</li>';
-					}).join('');
+
+					function renderItemsWithYearHeaders(list) {
+						let html = '';
+						let lastYear = null;
+						let listOpen = false;
+
+						list.forEach(function (item) {
+							if (item.year !== lastYear) {
+								if (listOpen) html += '</ol>';
+								html += '<div class="pub-year">' + item.year + '</div><ol class="pub-list">';
+								listOpen = true;
+								lastYear = item.year;
+							}
+
+							const badgesHtml = item.badges.map(function (b) {
+								return '<span class="badge badge-' + b.type + '">' + b.label + '</span>';
+							}).join('');
+							const doiHtml = item.doi
+								? '<a href="' + item.doi + '" target="_blank" rel="noopener">doi &rarr;</a>'
+								: '';
+
+							html += '<li class="pub" id="' + item.id + '">'
+								+ '<div class="pub-thumb"><img src="' + item.image + '" alt=""></div>'
+								+ '<div class="pub-body">'
+								+ (badgesHtml ? '<span class="pub-badges">' + badgesHtml + '</span>' : '')
+								+ '<span class="pub-title">' + item.title + '</span>'
+								+ '<div class="pub-authors">' + item.authors + '</div>'
+								+ '<div class="pub-venue">' + item.venue + doiHtml + '</div>'
+								+ '</div>'
+								+ '</li>';
+						});
+
+						if (listOpen) html += '</ol>';
+						return html;
+					}
+
+					function bindPubExtras() {
+						var overlay = document.getElementById('lightbox');
+						var overlayImg = document.getElementById('lightbox-img');
+						if (overlay && overlayImg) {
+							pubListEl.querySelectorAll('.pub-thumb img').forEach(function (img) {
+								img.addEventListener('click', function () {
+									overlayImg.src = img.src;
+									overlayImg.alt = img.alt;
+									overlay.classList.add('is-open');
+								});
+							});
+						}
+					}
+
+					function renderPubPage(page) {
+						let toRender = items;
+						if (pubPageSize) {
+							const start = (page - 1) * pubPageSize;
+							toRender = items.slice(start, start + pubPageSize);
+						}
+						pubListEl.innerHTML = renderItemsWithYearHeaders(toRender);
+						bindPubExtras();
+					}
+
+					function renderPubPagination(currentPage) {
+						if (!pubPaginationEl || !pubPageSize) return;
+						var totalPages = Math.ceil(items.length / pubPageSize);
+						if (totalPages <= 1) {
+							pubPaginationEl.innerHTML = '';
+							return;
+						}
+						var html = '';
+						for (var p = 1; p <= totalPages; p++) {
+							var activeClass = p === currentPage ? ' active' : '';
+							html += '<button class="page-btn' + activeClass + '" data-page="' + p + '">' + p + '</button>';
+						}
+						pubPaginationEl.innerHTML = html;
+						pubPaginationEl.querySelectorAll('.page-btn').forEach(function (btn) {
+							btn.addEventListener('click', function () {
+								var page = parseInt(btn.getAttribute('data-page'), 10);
+								renderPubPage(page);
+								renderPubPagination(page);
+								pubListEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+							});
+						});
+					}
+
+					// #hash로 들어온 경우 페이지네이션 무시하고 전체 렌더
+					if (window.location.hash) {
+						pubListEl.innerHTML = renderItemsWithYearHeaders(items);
+						bindPubExtras();
+						if (pubPaginationEl) pubPaginationEl.innerHTML = '';
+						var target = document.getElementById(window.location.hash.slice(1));
+						if (target) target.scrollIntoView();
+					} else {
+						renderPubPage(1);
+						renderPubPagination(1);
+					}
+				});
+		}
+
+		// ---------- Talks ----------
+		const talkListEl = document.getElementById("talk-list-auto");
+		if (talkListEl) {
+			const talkPageSize = parseInt(talkListEl.getAttribute("data-page-size"), 10) || null;
+			const talkPaginationEl = document.getElementById("talk-pagination");
+
+			fetch("assets/data/talks.json")
+				.then(function (res) { return res.json(); })
+				.then(function (items) {
+					function renderTalkPage(page) {
+						let toRender = items;
+						if (talkPageSize) {
+							const start = (page - 1) * talkPageSize;
+							toRender = items.slice(start, start + talkPageSize);
+						}
+						talkListEl.innerHTML = toRender.map(function (item) {
+							const badgesHtml = item.badges.map(function (b) {
+								return '<span class="badge badge-' + b.type + '">' + b.label + '</span>';
+							}).join('');
+							return '<li class="talk">'
+								+ '<span class="talk-title">' + item.title + '</span>'
+								+ '<span class="talk-badges">' + badgesHtml + '</span>'
+								+ '<div class="talk-authors">' + item.authors + '</div>'
+								+ '<div class="talk-meta">' + item.meta + '</div>'
+								+ '</li>';
+						}).join('');
+					}
+
+					function renderTalkPagination(currentPage) {
+						if (!talkPaginationEl || !talkPageSize) return;
+						var totalPages = Math.ceil(items.length / talkPageSize);
+						if (totalPages <= 1) {
+							talkPaginationEl.innerHTML = '';
+							return;
+						}
+						var html = '';
+						for (var p = 1; p <= totalPages; p++) {
+							var activeClass = p === currentPage ? ' active' : '';
+							html += '<button class="page-btn' + activeClass + '" data-page="' + p + '">' + p + '</button>';
+						}
+						talkPaginationEl.innerHTML = html;
+						talkPaginationEl.querySelectorAll('.page-btn').forEach(function (btn) {
+							btn.addEventListener('click', function () {
+								var page = parseInt(btn.getAttribute('data-page'), 10);
+								renderTalkPage(page);
+								renderTalkPagination(page);
+								talkListEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+							});
+						});
+					}
+
+					renderTalkPage(1);
+					renderTalkPagination(1);
 				});
 		}
 
@@ -97,7 +345,7 @@
 
 	const overlayImg = document.getElementById("lightbox-img");
 
-	document.querySelectorAll(".pub-thumb img, .thread-figure img, .project-thumb img, .grant-thumb img").forEach(function (img) {
+	document.querySelectorAll(".pub-thumb img, .thread-figure img, .project-thumb img, .grant-thumb img, .news-detail-inner img").forEach(function (img) {
 		img.addEventListener("click", function () {
 			overlayImg.src = img.src;
 			overlayImg.alt = img.alt;

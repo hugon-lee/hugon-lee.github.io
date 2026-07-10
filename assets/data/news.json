@@ -10,8 +10,12 @@
 		"date": "Jun 2026",
 		"badge": null,
 		"text": "Successfully defended Ph.D. thesis (official graduation on Aug 2026)",
-		"sub": "Title: <em>Micromechanical modeling and analysis of composites with interface and interphase effects</em>",
-		"link": null
+		"sub": "Title: Micromechanical modeling and analysis of composites with interface and interphase effects",
+		"link": null,
+		"details": {
+			"text": null,
+			"image":"assets/img/news/hugon-phd.jpeg"
+		}
 	},
 	{
 		"date": "May 2026",
@@ -24,14 +28,22 @@
 		"badge": null,
 		"text": "Delivered LLM tool-calling tutorial at KAIST (Daejeon, Republic of Korea)",
 		"sub": "At the 2026 winter AI class of <a href=\"https://www.kscm.re.kr/html/\" target=\"_blank\" rel=\"noopener\">KSCM</a> & the <a href=\"https://me.kaist.ac.kr/news/news_030100.html?bmain=view&uid=298\" target=\"_blank\" rel=\"noopener\">KAIST Industry-Academia Open Course</a> on AI-based design ",
-		"link": null
+		"link": null,
+		"details": {
+			"text": null,
+			"image":"assets/img/news/kscm-ai2025.jpeg"
+		}
 	},
 	{
 		"date": "Dec 2025",
 		"badge": null,
 		"text": "Delivered oral presentation at <a href=\"https://www.apcom2025.org\" target=\"_blank\" rel=\"noopener\">APCOM-ACCM 2025</a> (Brisbane, Australia)",
 		"sub": "On study of multi-fidelity surrogates for short fiber-reinforced plastics",
-		"link": null
+		"link": null,
+		"details": {
+			"text": null,
+			"image":"assets/img/news/apcom2025.png"
+		}
 	},
 	{
 		"date": "Apr 2025",
@@ -49,13 +61,21 @@
 		"date": "Oct 2024",
 		"badge": null,
 		"text": "Delivered talk at the KAIST-U of T IDC Workshop (Daejeon, Republic of Korea)",
-		"sub": "Title: Multi-fidelity predictive modeling of SFRP mechanical properties"
+		"sub": "Title: Multi-fidelity predictive modeling of SFRP mechanical properties",
+		"details": {
+			"text": null,
+			"image":"assets/img/news/idc2024.jpeg"
+		}
 	},
 	{
 		"date": "Aug 2024",
 		"badge": null,
 		"text": "Delivered oral presentation at <a href=\"https://www.ictam2024.org\" target=\"_blank\" rel=\"noopener\">ICTAM 2024</a> (Daegu, Republic of Korea)",
-		"sub": "On study of DLP 3D printing process modeling"
+		"sub": "On study of DLP 3D printing process modeling",
+		"details": {
+			"text": null,
+			"image":"assets/img/news/ictam2024.jpeg"
+		}
 	},
 	{
 		"date": "Nov 2023",
@@ -69,10 +89,14 @@
 		"badge": null,
 		"text": "Attended DCAMM PhD course on topology optimization (Lyngby, Denmark)",
 		"sub": "TopOpt summer school held at Technical University of Denmark (DTU)",
-		"link": null
+		"link": null,
+		"details": {
+			"text": null,
+			"image":"assets/img/news/dcamm2023.jpeg"
+		}
 	},
 	{
-		"date": "Dec 2025",
+		"date": "Dec 2022",
 		"badge": null,
 		"text": "Delivered poster presentation at <a href=\"https://enge2022.conference-archive.org\" target=\"_blank\" rel=\"noopener\">ENGE 2022</a> (Jeju, Republic of Korea)",
 		"sub": "On study of transfer learning strategies for composite properties",
@@ -81,7 +105,7 @@
 	{
 		"date": "Apr 2022",
 		"badge": null,
-		"text": "Attended Moldflow basic course; 5-days (Daegu, Republic of Korea)",
+		"text": "Attended Moldflow basic course (5-days; Daegu, Republic of Korea)",
 		"sub": "Held by HanKook Delcam Ltd. (now HD Solutions)",
 		"link": null
 	},

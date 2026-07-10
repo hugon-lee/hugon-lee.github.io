@@ -264,10 +264,12 @@ section > .wrap > h2 {
 
 .news-item {
 	display: flex;
-	gap: 16px;
+	/* gap: 16px; */
 	padding: 8px 0;
 	font-size: 14.5px;
 	border-bottom: 1px solid var(--rule);
+	flex-direction: column;
+	align-items: flex-start;
 }
 
 .news-item:last-child { border-bottom: none; }
@@ -290,6 +292,118 @@ section > .wrap > h2 {
 	font-size: 12px;
 	color: var(--text-light);
 	margin-top: 2px;
+}
+
+/* .news-item {
+	flex-direction: column;
+	align-items: flex-start;
+} */
+
+.news-item-row {
+	display: flex;
+	gap: 16px;
+	width: 100%;
+	cursor: default;
+}
+
+.news-item-row.has-detail {
+	cursor: pointer;
+}
+
+.news-chevron {
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 11px;
+	color: var(--text-light);
+	margin-left: 6px;
+	transition: transform 0.2s ease;
+	flex-shrink: 0;
+}
+
+.news-item.is-open .news-chevron {
+	transform: rotate(180deg);
+}
+
+.news-detail {
+	overflow: hidden;
+	max-height: 0;
+	visibility: hidden;
+	transition: max-height 0.3s ease, visibility 0s linear 0.3s;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.news-item.is-open .news-detail {
+	max-height: 600px;
+	visibility: visible;
+	transition: max-height 0.3s ease, visibility 0s linear;
+}
+
+.news-detail-inner {
+	padding: 0 0 0 100px;
+	margin: 0;
+	transition: padding 0.3s ease;
+}
+
+.news-item.is-open .news-detail-inner {
+	padding: 10px 0 4px 100px;
+}
+
+.news-detail-inner img {
+	width: 100%;
+	max-width: 320px;
+	border-radius: 4px;
+	border: 1px solid var(--rule);
+	margin-top: 8px;
+	cursor: zoom-in;
+}
+
+.news-detail-inner p {
+	font-size: 13px;
+	color: var(--text-light);
+	margin: 0;
+}
+
+.news-main {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.news-title-line {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 12px;
+	padding-right: 12px;
+}
+
+.news-pagination {
+	display: flex;
+	justify-content: center;
+	gap: 6px;
+	margin-top: 24px;
+}
+
+.page-btn {
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 12.5px;
+	border: 1px solid var(--rule);
+	background: none;
+	color: var(--text-light);
+	padding: 4px 10px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.page-btn:hover {
+	border-color: var(--accent);
+	color: var(--accent);
+}
+
+.page-btn.active {
+	background: var(--accent);
+	border-color: var(--accent);
+	color: var(--bg);
 }
 
 /* ---------- Research threads ---------- */

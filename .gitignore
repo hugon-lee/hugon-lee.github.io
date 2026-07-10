@@ -3,6 +3,7 @@ _site
 .DS_store
 .idea
 tex-cv/
+archive/
 archive-projs/
 archive-al-folio/
 assets/illustrator/
