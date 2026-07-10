@@ -166,8 +166,9 @@
 							html += '<li class="pub" id="' + item.id + '">'
 								+ '<div class="pub-thumb"><img src="' + item.image + '" alt=""></div>'
 								+ '<div class="pub-body">'
-								+ (badgesHtml ? '<span class="pub-badges">' + badgesHtml + '</span>' : '')
 								+ '<span class="pub-title">' + item.title + '</span>'
+								+ ' '
+								+ (badgesHtml ? '<span class="pub-badges">' + badgesHtml + '</span>' : '')
 								+ '<div class="pub-authors">' + item.authors + '</div>'
 								+ '<div class="pub-venue">' + item.venue + doiHtml + '</div>'
 								+ '</div>'
