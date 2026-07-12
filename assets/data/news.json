@@ -3,7 +3,7 @@
 		"date": "Jul 2026",
 		"badge": "UPCOMING",
 		"text": "Oral presentation at <a href=\"https://wccm-eccomas2026.org\" target=\"_blank\" rel=\"noopener\">WCCM-ECCOMAS 2026</a> (Munich, Germany)",
-		"sub": "In Session MS344 - Agentic AI and Physics-Informed Machine Learning for Next-Generation Design and Manufacturing",
+		"sub": "Title: Multi-agent framework for micromechanical modeling, simulation, and applicability analysis",
 		"link": null
 	},
 	{
@@ -12,16 +12,20 @@
 		"text": "Successfully defended Ph.D. thesis (official graduation on Aug 2026)",
 		"sub": "Title: Micromechanical modeling and analysis of composites with interface and interphase effects",
 		"link": null,
-		"details": {
+		"detail": {
 			"text": null,
-			"image":"assets/img/news/hugon-phd.jpeg"
+			"image":"assets/img/news/hugon-phd.jpg"
 		}
 	},
 	{
 		"date": "May 2026",
 		"badge": null,
-		"text": "Received outstanding paper award from <a href=\"https://www.ksme.or.kr/\" target=\"_blank\" rel=\"noopener\">KSME</a> CAE & Appl Mech Div [<a href=\"https://me.kaist.ac.kr/news/news_020100.html?bmain=view&uid=1159\" target=\"_blank\" rel=\"noopener\">KAIST ME</a>]",
-		"sub": "On study of multi-fidelity surrogates for short fiber-reinforced plastics"
+		"text": "Received outstanding paper award from <a href=\"https://www.ksme.or.kr/\" target=\"_blank\" rel=\"noopener\">KSME</a> [<a href=\"https://me.kaist.ac.kr/news/news_020100.html?bmain=view&uid=1159\" target=\"_blank\" rel=\"noopener\">KAIST ME</a>]",
+		"sub": "Title: Multi-fidelity surrogates for efficient prediction of SFRP mechanical properties",
+		"detail": {
+			"text": null,
+			"image":"assets/img/news/ksme2026.jpg"
+		}
 	},
 	{
 		"date": "Feb 2026",
@@ -29,42 +33,50 @@
 		"text": "Delivered LLM tool-calling tutorial at KAIST (Daejeon, Republic of Korea)",
 		"sub": "At the 2026 winter AI class of <a href=\"https://www.kscm.re.kr/html/\" target=\"_blank\" rel=\"noopener\">KSCM</a> & the <a href=\"https://me.kaist.ac.kr/news/news_030100.html?bmain=view&uid=298\" target=\"_blank\" rel=\"noopener\">KAIST Industry-Academia Open Course</a> on AI-based design ",
 		"link": null,
-		"details": {
+		"detail": {
 			"text": null,
-			"image":"assets/img/news/kscm-ai2025.jpeg"
+			"image":"assets/img/news/kscm-ai2025.jpg"
 		}
 	},
 	{
 		"date": "Dec 2025",
 		"badge": null,
 		"text": "Delivered oral presentation at <a href=\"https://www.apcom2025.org\" target=\"_blank\" rel=\"noopener\">APCOM-ACCM 2025</a> (Brisbane, Australia)",
-		"sub": "On study of multi-fidelity surrogates for short fiber-reinforced plastics",
+		"sub": "Title: Multi-fidelity surrogate for mechanical properties of short fiber reinforced plastics: leveraging information from theory to experiment",
 		"link": null,
-		"details": {
+		"detail": {
 			"text": null,
-			"image":"assets/img/news/apcom2025.png"
+			"image":"assets/img/news/apcom2025.jpg"
 		}
 	},
 	{
 		"date": "Apr 2025",
 		"badge": null,
 		"text": "Received outstanding paper award from <a href=\"https://www.ksme.or.kr/\" target=\"_blank\" rel=\"noopener\">KSME</a> CAE & Appl Mech Div [<a href=\"https://me.kaist.ac.kr/news/news_020100.html?bmain=view&uid=971\" target=\"_blank\" rel=\"noopener\">KAIST ME</a>]",
-		"sub": "On study of DLP 3D printing process modeling"
+		"sub": "Title: Modeling and simulation of DLP 3D printing process using Abaqus",
+		"detail": {
+			"text": null,
+			"image":"assets/img/news/ksme2025.jpg"
+		}
 	},
 	{
 		"date": "Jan 2025",
 		"badge": null,
 		"text": "Attended <a href=\"https://ksme.or.kr/conference/ConferenceView.asp?AC=6&CODE=C620241101&B_CATE=&top_param=1&sub_param=7\" target=\"_blank\" rel=\"noopener\">Adv. AI Tutorial</a> by KSME (Jeonju, Republic of Korea)",
-		"sub": "Topics: ML basics; generative models; physics-informed neural network"
+		"sub": "Topics: ML basics; generative models; physics-informed neural network",
+		"detail": {
+			"text": null,
+			"image":"assets/img/news/advai2025.jpg"
+		}
 	},
 	{
 		"date": "Oct 2024",
 		"badge": null,
 		"text": "Delivered talk at the KAIST-U of T IDC Workshop (Daejeon, Republic of Korea)",
 		"sub": "Title: Multi-fidelity predictive modeling of SFRP mechanical properties",
-		"details": {
+		"detail": {
 			"text": null,
-			"image":"assets/img/news/idc2024.jpeg"
+			"image":"assets/img/news/idc2024.jpg"
 		}
 	},
 	{
@@ -72,9 +84,9 @@
 		"badge": null,
 		"text": "Delivered oral presentation at <a href=\"https://www.ictam2024.org\" target=\"_blank\" rel=\"noopener\">ICTAM 2024</a> (Daegu, Republic of Korea)",
 		"sub": "On study of DLP 3D printing process modeling",
-		"details": {
+		"detail": {
 			"text": null,
-			"image":"assets/img/news/ictam2024.jpeg"
+			"image":"assets/img/news/ictam2024.jpg"
 		}
 	},
 	{
@@ -90,7 +102,7 @@
 		"text": "Attended DCAMM PhD course on topology optimization (Lyngby, Denmark)",
 		"sub": "TopOpt summer school held at Technical University of Denmark (DTU)",
 		"link": null,
-		"details": {
+		"detail": {
 			"text": null,
 			"image":"assets/img/news/dcamm2023.jpeg"
 		}

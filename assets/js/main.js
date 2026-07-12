@@ -163,8 +163,11 @@
 								? '<a href="' + item.doi + '" target="_blank" rel="noopener">doi &rarr;</a>'
 								: '';
 
+							const thumbHtml = item.image
+								? '<div class="pub-thumb"><img src="' + item.image + '" alt=""></div>'
+								: '';
+
 							html += '<li class="pub" id="' + item.id + '">'
-								+ '<div class="pub-thumb"><img src="' + item.image + '" alt=""></div>'
 								+ '<div class="pub-body">'
 								+ '<span class="pub-title">' + item.title + '</span>'
 								+ ' '
@@ -172,6 +175,7 @@
 								+ '<div class="pub-authors">' + item.authors + '</div>'
 								+ '<div class="pub-venue">' + item.venue + doiHtml + '</div>'
 								+ '</div>'
+								+ thumbHtml
 								+ '</li>';
 						});
 
@@ -293,6 +297,117 @@
 
 					renderTalkPage(1);
 					renderTalkPagination(1);
+				});
+		}
+
+		// ---------- Projects ----------
+		const projectListEl = document.getElementById("project-list-auto");
+		if (projectListEl) {
+			const projPageSize = parseInt(projectListEl.getAttribute("data-page-size"), 10) || null;
+			const projPaginationEl = document.getElementById("project-pagination");
+
+			fetch("assets/data/projects.json")
+				.then(function (res) { return res.json(); })
+				.then(function (items) {
+
+					function renderItemsWithStatusHeaders(list) {
+						let html = '';
+						let lastStatus = null;
+						let groupOpen = false;
+
+						list.forEach(function (item) {
+							if (item.status !== lastStatus) {
+								if (groupOpen) html += '</div>'; // close previous group
+								html += '<div class="project-status-header">' + item.status + '</div>';
+								html += '<div class="grant-group">';
+								groupOpen = true;
+								lastStatus = item.status;
+							}
+
+							// const badgeLabel = item.fundingType.toUpperCase();
+							// const badgeHtml = '<span class="badge badge-' + item.fundingType + '">' + badgeLabel + '</span>';
+							const fundingLabels = { government: 'GOV', industry: 'IND', internal: 'INT' };
+							const badgeLabel = fundingLabels[item.fundingType] || item.fundingType.toUpperCase();
+							const badgeHtml = '<span class="badge badge-' + item.fundingType + '">' + badgeLabel + '</span>';
+							const piHtml = item.pi ? ' (PI: ' + item.pi + ')' : '';
+							const roleClass = item.role === 'Principal Investigator' ? 'role-pi' : 'role-participant';
+							const roleHtml = '<span class="grant-role ' + roleClass + '">' + item.role + '</span>';
+							const thumbHtml = item.image
+								? '<div class="grant-thumb"><img src="' + item.image + '" alt=""></div>'
+								: '';
+							const sideClass = item.imageSide === "left" ? "img-left" : "img-right";
+							const titleKrHtml = item.titleKr
+								? '<div class="grant-title-kr">' + item.titleKr + '</div>'
+								: '';
+
+							html += '<div class="grant-entry ' + sideClass + '">'
+								// + '<div class="grant-meta">' + item.funder + ' &middot; ' + item.period + ' &middot; ' + roleHtml + piHtml + '</div>'
+								+ '<div class="grant-meta">' + item.funder + ' &middot; ' + roleHtml + piHtml + '</div>'
+								+ '<div class="grant-main-row">'
+								+ '<div class="grant-body">'
+								// + '<div class="grant-title">' + item.title + ' '+ badgeHtml + '</div>'
+								+ '<div class="grant-title">' + item.title + ' (' + item.period + ') '+ badgeHtml + '</div>'
+								+ titleKrHtml
+								+ '<div class="grant-desc">' + item.desc + '</div>'
+								+ '</div>'
+								+ thumbHtml
+								+ '</div>'
+								+ '</div>';
+						});
+
+						if (groupOpen) html += '</div>'; // close last group
+						return html;
+					}
+
+					function bindProjectExtras() {
+						var overlay = document.getElementById('lightbox');
+						var overlayImg = document.getElementById('lightbox-img');
+						if (overlay && overlayImg) {
+							projectListEl.querySelectorAll('.grant-thumb img').forEach(function (img) {
+								img.addEventListener('click', function () {
+									overlayImg.src = img.src;
+									overlayImg.alt = img.alt;
+									overlay.classList.add('is-open');
+								});
+							});
+						}
+					}
+
+					function renderProjectPage(page) {
+						let toRender = items;
+						if (projPageSize) {
+							const start = (page - 1) * projPageSize;
+							toRender = items.slice(start, start + projPageSize);
+						}
+						projectListEl.innerHTML = renderItemsWithStatusHeaders(toRender);
+						bindProjectExtras();
+					}
+
+					function renderProjectPagination(currentPage) {
+						if (!projPaginationEl || !projPageSize) return;
+						var totalPages = Math.ceil(items.length / projPageSize);
+						if (totalPages <= 1) {
+							projPaginationEl.innerHTML = '';
+							return;
+						}
+						var html = '';
+						for (var p = 1; p <= totalPages; p++) {
+							var activeClass = p === currentPage ? ' active' : '';
+							html += '<button class="page-btn' + activeClass + '" data-page="' + p + '">' + p + '</button>';
+						}
+						projPaginationEl.innerHTML = html;
+						projPaginationEl.querySelectorAll('.page-btn').forEach(function (btn) {
+							btn.addEventListener('click', function () {
+								var page = parseInt(btn.getAttribute('data-page'), 10);
+								renderProjectPage(page);
+								renderProjectPagination(page);
+								projectListEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+							});
+						});
+					}
+
+					renderProjectPage(1);
+					renderProjectPagination(1);
 				});
 		}
 

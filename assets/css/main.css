@@ -13,6 +13,8 @@
 	--max-width: 860px;
 	--scope: #3a6b8a;
 	--scope-soft: #dbe6ec;
+	--fund-industry: #8a4a3a;
+	--fund-industry-soft: #f0ddd6;
 }
 
 html[data-theme="dark"] {
@@ -29,6 +31,8 @@ html[data-theme="dark"] {
 	--card-bg: #1d1e20;
 	--scope: #7fb0d1;
 	--scope-soft: #1f2f38;
+	--fund-industry: #d19080;
+	--fund-industry-soft: #3a2622;
 }
 
 
@@ -69,6 +73,7 @@ h1, h2, h3 {
 	max-width: var(--max-width);
 	margin: 0 auto;
 	padding: 0 24px;
+	overflow-x: hidden;
 }
 
 /* ---------- Nav ---------- */
@@ -79,6 +84,7 @@ nav {
 	background: var(--bg);
 	border-bottom: 1px solid var(--rule);
 	z-index: 10;
+	transform: translateZ(0);
 }
 
 nav .wrap {
@@ -219,6 +225,7 @@ header.hero {
 
 .page-header {
 	padding: 44px 0 8px;
+	transform: translateZ(0);
 }
 
 .page-header .eyebrow {
@@ -232,6 +239,8 @@ header.hero {
 
 .page-header h1 {
 	font-size: 30px;
+	overflow-wrap: break-word;
+	word-break: keep-all;
 }
 
 .page-header p.desc {
@@ -500,27 +509,55 @@ section > .wrap > h2 {
 
 .grant-entry {
 	display: flex;
-	gap: 20px;
-	align-items: flex-start;
+	flex-direction: column;
 	padding: 20px 0;
 	border-bottom: 1px solid var(--rule);
 }
 
-.grant-entry:last-child {
+.grant-group .grant-entry:last-child {
 	border-bottom: none;
 }
 
-.grant-entry.img-right {
+.grant-main-row {
+	display: flex;
+	gap: 20px;
+	align-items: flex-start;
+	margin-top: 0px;
+}
+
+.grant-entry.img-right .grant-main-row {
 	flex-direction: row;
 }
 
-.grant-entry.img-left {
+.grant-entry.img-left .grant-main-row {
 	flex-direction: row-reverse;
 }
+
+.grant-group .grant-entry:last-child {
+	border-bottom: none;
+}
+
+.project-status-header {
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: var(--text-light);
+	font-weight: 500;
+	margin: 28px 0 10px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.project-status-header::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+
+.project-status-header:first-of-type { margin-top: 0; }
 
 .grant-thumb {
 	flex: 0 0 160px;
 	width: 160px;
+	max-width: 160px;
 	border-radius: 4px;
 	overflow: hidden;
 	background: var(--bg-alt);
@@ -529,6 +566,7 @@ section > .wrap > h2 {
 
 .grant-thumb img {
 	width: 100%;
+	max-width: 100%;
 	height: auto;
 	display: block;
 	cursor: zoom-in;
@@ -543,14 +581,57 @@ section > .wrap > h2 {
 	font-family: "IBM Plex Mono", monospace;
 	font-size: 12px;
 	color: var(--text-light);
-	margin-bottom: 6px;
+	margin-bottom: 2px;
 }
+
+.grant-role {
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 11px;
+	font-weight: 600;
+	padding: 1px 6px;
+	border-radius: 3px;
+	letter-spacing: 0.02em;
+}
+
+.grant-role.role-pi {
+	color: var(--accent);
+	background: var(--accent-soft);
+}
+
+.grant-role.role-participant {
+	color: var(--text-light);
+	background: var(--bg-alt);
+}
+
+/* .grant-title {
+	font-size: 17px;
+	font-weight: 600;
+	font-family: "Source Serif 4", Georgia, serif;
+	margin-bottom: 8px;
+	display: flex;
+	align-items: baseline;
+	gap: 8px;
+	flex-wrap: wrap;
+} */
 
 .grant-title {
 	font-size: 16px;
 	font-weight: 600;
 	font-family: "Source Serif 4", Georgia, serif;
-	margin-bottom: 8px;
+	margin-bottom: 4px;
+}
+
+.grant-title .badge {
+	vertical-align: middle;
+	margin-left: 6px;
+}
+
+.grant-title-kr {
+	font-family: "Noto Serif KR", "Source Serif 4", Georgia, serif;
+	font-size: 14.5px;
+	color: var(--text-light);
+	margin-top: -2px;
+	margin-bottom: 4px;
 }
 
 .grant-desc {
@@ -558,9 +639,13 @@ section > .wrap > h2 {
 	color: var(--text-light);
 }
 
+.badge-government { color: var(--scope); background: var(--scope-soft); border-color: transparent; }
+.badge-industry { color: var(--fund-industry); background: var(--fund-industry-soft); border-color: transparent; }
+.badge-internal { color: var(--type-tag); background: transparent; border-color: var(--rule); }
+
 @media (max-width: 640px) {
-	.grant-entry,
-	.grant-entry.img-left {
+	.grant-main-row,
+	.grant-entry.img-left .grant-main-row {
 		flex-direction: column;
 	}
 	.grant-thumb {
@@ -569,16 +654,18 @@ section > .wrap > h2 {
 	}
 }
 
-
 /* ---------- Publications ---------- */
 
 .pub-legend { font-size: 13px; color: var(--text-light); margin-bottom: 22px; }
 
 .pub-year {
 	font-family: "IBM Plex Mono", monospace;
-	font-size: 13px;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
 	color: var(--text-light);
-	margin: 26px 0 12px;
+	font-weight: 500;
+	margin: 28px 0 10px;
 	display: flex;
 	align-items: center;
 	gap: 12px;

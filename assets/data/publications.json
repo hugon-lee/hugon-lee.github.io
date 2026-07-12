@@ -1,5 +1,27 @@
 [
 	{
+		"id": "parkforecasting",
+		"year": "In progress",
+		"image": "assets/img/publications/parkforecasting.jpg",
+		"badges": [
+		],
+		"title": "Forecasting long-term spatial-temporal dynamics with generative transformer networks",
+		"authors": "Park, D., <span class=\"me\">Lee, H.</span>, and Ryu, S.<sup>*</sup>",
+		"venue": "Under review &nbsp&nbsp&middot;&nbsp&nbsp <em>engrXiv preprint</em> 10.31224/4295 (2025)",
+		"doi": "https://doi.org/10.31224/4295"
+	},
+	{
+		"id": "shenbubble",
+		"year": "In progress",
+		"image": null,
+		"badges": [
+		],
+		"title": "Machine learning-assisted predictive modelling of bubble growth phenomenon in foaming",
+		"authors": "Shen, X. W.<sup>&dagger;</sup>, <span class=\"me\">Lee, H.</span><sup>&dagger;</sup>, Zhang, L., Chang, N. R.-S., Pehlert, G., Ryu, S.<sup>*</sup>, Kweon, M. S. and Lee, P. C.<sup>*</sup>",
+		"venue": "Submitted",
+		"doi": null
+	},
+	{
 		"id": "kim2026morphology",
 		"year": "2026",
 		"image": "assets/img/publications/kim2026morphology.jpg",
@@ -35,7 +57,7 @@
 		"image": "assets/img/publications/lee2025toward.jpg",
 		"badges": [
 			{
-				"type": "type",
+				"type": "status",
 				"label": "PERSPECTIVE"
 			}
 		],
@@ -130,7 +152,7 @@
 		"image": "assets/img/publications/lee2023advancements.jpg",
 		"badges": [
 			{
-				"type": "type",
+				"type": "status",
 				"label": "REVIEW"
 			}
 		],
@@ -145,7 +167,7 @@
 		"image": "assets/img/publications/lee2023machine.jpg",
 		"badges": [
 			{
-				"type": "type",
+				"type": "status",
 				"label": "REVIEW"
 			}
 		],
@@ -155,27 +177,12 @@
 		"doi": "https://doi.org/10.1039/D3MH00039G"
 	},
 	{
-		"id": "parkforecasting",
-		"year": "In progress",
-		"image": "assets/img/publications/parkforecasting.jpg",
-		"badges": [
-			{
-				"type": "status",
-				"label": "UNDER REVIEW"
-			}
-		],
-		"title": "Forecasting long-term spatial-temporal dynamics with generative transformer networks",
-		"authors": "Park, D., <span class=\"me\">Lee, H.</span>, and Ryu, S.<sup>*</sup>",
-		"venue": "engrXiv preprint 10.31224/4295 (2025)",
-		"doi": "https://doi.org/10.31224/4295"
-	},
-	{
 		"id": "lee2026phdthesis",
 		"year": "Thesis",
 		"image": "assets/img/publications/lee2026micromechanical.jpg",
 		"badges": [
 			{
-				"type": "status",
+				"type": "type",
 				"label": "TO APPEAR"
 			}
 		],
