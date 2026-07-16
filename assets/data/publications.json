@@ -2,7 +2,7 @@
 	{
 		"id": "park2026uncertainty",
 		"year": "In progress",
-		"image": null,
+		"image": "assets/img/publications/park2026uncertainty.jpg",
 		"badges": [
 		],
 		"title": "Uncertainty-aware structure-property mapping of spinodoid metamaterials via heteroscedastic Gaussian process regression",
@@ -13,7 +13,7 @@
 	{
 		"id": "park2025forecasting",
 		"year": "In progress",
-		"image": "assets/img/publications/parkforecasting.jpg",
+		"image": "assets/img/publications/park2025forecasting.jpg",
 		"badges": [
 		],
 		"title": "Forecasting long-term spatial-temporal dynamics with generative transformer networks",
