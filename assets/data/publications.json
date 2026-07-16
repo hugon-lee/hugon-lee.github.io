@@ -1,6 +1,17 @@
 [
 	{
-		"id": "parkforecasting",
+		"id": "park2026uncertainty",
+		"year": "In progress",
+		"image": null,
+		"badges": [
+		],
+		"title": "Uncertainty-aware structure-property mapping of spinodoid metamaterials via heteroscedastic Gaussian process regression",
+		"authors": "Park, M.<sup>&dagger;</sup>, Park, J.<sup>&dagger;</sup>, Lee, M.<sup>&dagger;</sup>, <span class=\"me\">Lee, H.</span>, Cho, H., Lee, I.<sup>*</sup> and Ryu, S.<sup>*</sup>",
+		"venue": "Submitted &nbsp&nbsp&middot;&nbsp&nbsp <em>arXiv preprint</em> arXiv:2607.11209 (2026)",
+		"doi": "https://doi.org/10.48550/arXiv.2607.11209"
+	},
+	{
+		"id": "park2025forecasting",
 		"year": "In progress",
 		"image": "assets/img/publications/parkforecasting.jpg",
 		"badges": [
@@ -11,7 +22,7 @@
 		"doi": "https://doi.org/10.31224/4295"
 	},
 	{
-		"id": "shenbubble",
+		"id": "shen2024bubble",
 		"year": "In progress",
 		"image": null,
 		"badges": [
