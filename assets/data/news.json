@@ -1,7 +1,7 @@
 [
 	{
 		"date": "Jul 2026",
-		"badge": "UPCOMING",
+		"badge": null,
 		"text": "Oral presentation at <a href=\"https://wccm-eccomas2026.org\" target=\"_blank\" rel=\"noopener\">WCCM-ECCOMAS 2026</a> (Munich, Germany)",
 		"sub": "Title: Multi-agent framework for micromechanical modeling, simulation, and applicability analysis",
 		"link": null
