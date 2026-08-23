@@ -35,13 +35,13 @@
 	{
 		"id": "kim2026structural",
 		"year": "2026",
-		"image": "",
+		"image": "assets/img/publications/kim2026structural.jpg",
 		"badges": [
 		],
 		"title": "Structural hierarchy can enhance the elastic modulus of random porous materials",
 		"authors": "Kim, Y., <span class=\"me\">Lee, H.</span>, Rhie, S., Ryu, S. and Kang, K.<sup>*</sup>",
-		"venue": "<em>Heliyon</em>, accepted",
-		"doi": ""
+		"venue": "<em>Heliyon 12</em>(13), e45275 (2026)",
+		"doi": "https://doi.org/10.1016/j.heliyon.2026.e45275"
 	},
 	{
 		"id": "kim2026morphology",
@@ -70,7 +70,7 @@
 		"badges": [],
 		"title": "Comparative study of Gaussian process and additive Gaussian process for multi-objective optimization in air-cooled battery thermal management systems",
 		"authors": "Cho, H., Kim, M., Park, Y., <span class=\"me\">Lee, H.</span>, Lee, I. and Ryu, S.<sup>*</sup>",
-		"venue": "<em>Journal of Mechanical Science and Technology 29</em>(12), 7623&ndash;7634 (2025)",
+		"venue": "<em>Journal of Mechanical Science and Technology 39</em>(12), 7623&ndash;7634 (2025)",
 		"doi": "https://doi.org/10.1007/s12206-025-1123-3"
 	},
 	{
