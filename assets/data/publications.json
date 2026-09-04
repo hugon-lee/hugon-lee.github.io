@@ -29,8 +29,8 @@
 		],
 		"title": "Uncertainty-aware structure-property mapping of spinodoid metamaterials via heteroscedastic Gaussian process regression",
 		"authors": "Park, M.<sup>&dagger;</sup>, Park, J.<sup>&dagger;</sup>, Lee, M.<sup>&dagger;</sup>, <span class=\"me\">Lee, H.</span>, Cho, H., Lee, I.<sup>*</sup> and Ryu, S.<sup>*</sup>",
-		"venue": "<em>Materials &amp; Design</em>, accepted (2026)",
-		"doi": "https://doi.org/10.48550/arXiv.2607.11209"
+		"venue": "<em>Materials &amp; Design 270</em>, 116914 (2026)",
+		"doi": "https://doi.org/10.1016/j.matdes.2026.116914"
 	},
 	{
 		"id": "kim2026structural",
@@ -202,12 +202,7 @@
 		"id": "lee2026phdthesis",
 		"year": "Thesis",
 		"image": "assets/img/publications/lee2026micromechanical.jpg",
-		"badges": [
-			{
-				"type": "type",
-				"label": "TO APPEAR"
-			}
-		],
+		"badges": [],
 		"title": "Micromechanical modeling and analysis of composites with interface and interphase effects",
 		"authors": "<span class=\"me\">Lee, H.</span>",
 		"venue": "<em>Ph.D. dissertation</em>, KAIST, Republic of Korea (Aug 2026)",
